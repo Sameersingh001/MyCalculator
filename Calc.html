@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+
+    <style>
+        
+body {
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  background-color: red;
+  margin-top: 100px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.box label {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box h1 {
+  width: 20%;
+}
+.box input {
+  width: 60%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+.box select {
+  height: 30px;
+  width: 30%;
+  margin-left: 35%;
+}
+.box button {
+  height: 35px;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 60px;
+  color: white;
+  background-color: rgb(32, 223, 32);
+  cursor: pointer;
+  border-radius: 20px;
+}
+.box #result {
+  margin-top: 20px;
+  margin-left: 20%;
+}
+    </style>
+</head>
+<body>
+   
+<div class="box">
+
+    <label>
+        <h1>
+            A = 
+        </h1>
+        <input type="number" id = "random" placeholder="Enter the number">
+    </label>
+ 
+   <label>
+    <h1>
+        B = 
+    </h1>
+    <input type="number" id = "random2" placeholder="Enter the number">
+   </label>
+
+   <select id="Calc">
+    <option value="+">+ Pluse</option>
+    <option value="-">- Minus</option>
+    <option value="*">* Multiply</option>
+    <option value="/">/ Divide</option>
+   </select>
+
+
+
+   <button type="button" onclick="SubmitEvent()">Calculate</button>
+
+
+   <input type="number" id="result">
+</div>
+
+
+
+    <script>
+        function SubmitEvent(){
+            let a = parseInt(document.getElementById("random").value);
+            let b = parseInt(document.getElementById("random2").value);
+            let res = document.getElementById("Calc").value;
+
+
+          if(res==="+"){
+            let a = parseInt(document.getElementById("random").value);
+            let b = parseInt(document.getElementById("random2").value);
+            document.getElementById("result").value=a+b;
+          }
+          if(res==="-"){
+            let a = parseInt(document.getElementById("random").value);
+            let b = parseInt(document.getElementById("random2").value);
+            document.getElementById("result").value=a-b;
+          }
+          if(res==="*"){
+            let a = parseInt(document.getElementById("random").value);
+            let b = parseInt(document.getElementById("random2").value);
+            document.getElementById("result").value=a*b;
+          }
+          if(res==="/"){
+            let a = parseInt(document.getElementById("random").value);
+            let b = parseInt(document.getElementById("random2").value);
+            document.getElementById("result").value=a/b;
+          }
+
+
+        }
+
+    </script>
+</body>
+</html>
